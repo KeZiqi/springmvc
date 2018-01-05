@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DID Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- 加载外部映射文件 -->
+	<!-- <properties resource="classpath:db.properties"></properties> -->
+
+
+	<!-- 别名定义 -->
+	<typeAliases>
+		<!-- 批量别名定义 指定包名，mybatis自动扫描包中的po类，别名就是类名（首写字母大写或小写都可以） -->
+		<package name="entity" />
+	</typeAliases>
+
+	<!-- 配置mybatis运行环境 -->
+	<!-- <environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+
+			</dataSource>
+
+		</environment>
+	</environments> -->
+
+	<!-- 加载映射文件 -->
+	<mappers>
+		<!-- 原始dao方法需配置 -->
+		<package name="dao"></package> 
+		<!-- <mapper resource="dao/UserMapper.xml"></mapper> -->
+	</mappers>
+
+</configuration>
